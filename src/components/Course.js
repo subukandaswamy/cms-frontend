@@ -1,18 +1,13 @@
 import React from "react";
 
-function Course(props) {
+function Course({ course }) {
   return (
-    // <div>
-    //   Course: {props.courseid} {props.coursename}
-    // </div>
-    <div class="card m-5">
-      <div class="card-header">{props.courseid}</div>
-      <div class="card-body">
-        <h5 class="card-title">{props.coursename}</h5>
-        <p class="card-text">
-          senior software design project course aka capstone
-        </p>
-        <a href="#" class="btn btn-danger">
+    <div className="card m-5">
+      <div className="card-header">{course.courseid}</div>
+      <div className="card-body">
+        <h5 className="card-title">{course.coursename}</h5>
+        <p className="card-text">{course.coursedesc}</p>
+        <a href="#" className="btn btn-danger">
           Delete
         </a>
       </div>

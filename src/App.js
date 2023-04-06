@@ -1,19 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Course from "./components/Course";
+import CourseForm from "./components/CourseForm";
 
 function App() {
-  const coursesVal = [
-    {
-      courseid: "CPTS421",
-      coursename: "Capstone",
-    },
-    {
-      courseid: "CPTS489",
-      coursename: "Web Development",
-    },
-  ];
-
   const [courses, setcourses] = useState([]);
 
   useEffect(() => {
@@ -25,11 +15,10 @@ function App() {
 
   return (
     <div>
-      <h1>Welcome to CMS!</h1>
+      <h1>Welcome to CMS</h1>
+      <CourseForm setcourses={setcourses} />
       {courses.map((course) => {
-        return (
-          <Course courseid={course.courseid} coursename={course.coursename} />
-        );
+        return <Course course={course} />;
       })}
     </div>
   );
