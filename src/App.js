@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Course from "./components/Course";
+import CourseForm from "./components/CourseForm";
+import Message from "./components/Message";
 
 function App() {
   const coursesVal = [
@@ -15,6 +17,7 @@ function App() {
   ];
 
   const [courses, setcourses] = useState([]);
+  const [msg, setMsg] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:4000/api/courses")
@@ -26,6 +29,9 @@ function App() {
   return (
     <div>
       <h1>Welcome to CMS!</h1>
+      <CourseForm setcourses={setcourses} setMsg={setMsg} />
+
+      {msg.length > 0 && <Message msg={msg} />}
       {courses.map((course) => {
         return (
           <Course courseid={course.courseid} coursename={course.coursename} />
