@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CourseForm({ setcourses, setMsg }) {
+function CourseForm({ setMsg }) {
   const [courseid, setCourseid] = useState("");
   const [coursename, setCoursename] = useState("");
   const [coursedesc, setCoursedesc] = useState("");
@@ -35,7 +35,7 @@ function CourseForm({ setcourses, setMsg }) {
     })
       .then((course) => {
         console.log(course);
-        setcourses((prevcourses) => [...prevcourses, course]);
+        // setcourses((prevcourses) => [...prevcourses, course]);
         setMsg(() => `Course ${course.courseid} added succesfully`);
       })
       .catch((err) => console.error(err));

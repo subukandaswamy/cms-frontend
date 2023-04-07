@@ -13,7 +13,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => setcourses(data))
       .catch(console.error);
-  }, []);
+  }, [msg]);
 
   return (
     <div>
@@ -21,7 +21,7 @@ function App() {
       <CourseForm setcourses={setcourses} setMsg={setMsg} />
       {msg.length > 0 && <Message msg={msg} setMsg={setMsg} />}
       {courses.map((course) => {
-        return <Course course={course} />;
+        return <Course course={course} setMsg={setMsg} />;
       })}
     </div>
   );
