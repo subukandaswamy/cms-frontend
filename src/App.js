@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div>
-      <h1>Welcome to CMS!</h1>
+      <h1 className="App-header">Course Management System</h1>
       <CourseForm setcourses={setcourses} setMsg={setMsg} />
 
       {msg.length > 0 && <Message msg={msg} />}
