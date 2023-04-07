@@ -3,7 +3,6 @@ import "./App.css";
 import Course from "./components/Course";
 import CourseForm from "./components/CourseForm";
 import Message from "./components/Message";
-
 function App() {
   const [courses, setcourses] = useState([]);
   const [msg, setMsg] = useState("");

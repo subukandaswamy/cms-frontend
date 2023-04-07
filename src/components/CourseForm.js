@@ -112,13 +112,13 @@ function CourseForm({ setMsg }) {
           <input type="submit" value="Add Course" className="btn btn-primary" />
         </div>
       </form>
-      <div>
+      {/* <div>
         <p>{courseid}</p>
         <p>{coursename}</p>
         <p>{coursedesc}</p>
         <p>{semester}</p>
         <p>{enrollnum}</p>
-      </div>
+      </div> */}
     </div>
   );
 }
