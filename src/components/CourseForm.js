@@ -35,7 +35,7 @@ function CourseForm({ setcourses, setMsg }) {
     })
       .then((course) => {
         console.log(course);
-        setcourses((prevCourses) => [...prevCourses, course]);
+        //setcourses((prevCourses) => [...prevCourses, course]);
         setMsg(`course ${course.courseid} created succesfully`);
       })
       .catch(console.error);
@@ -121,13 +121,13 @@ function CourseForm({ setcourses, setMsg }) {
         <div className="form-group">
           <input type="submit" value="Add Course" className="btn btn-primary" />
         </div>
-        <div>
+        {/* <div>
           <p>{courseid}</p>
           <p>{coursename}</p>
           <p>{coursedesc}</p>
           <p>{semester}</p>
           <p>{enrollnum}</p>
-        </div>
+        </div> */}
       </form>
     </div>
   );
