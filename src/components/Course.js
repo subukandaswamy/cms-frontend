@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import DeleteModal from "./DeleteModal";
 
 function Course({ course, setMsg }) {
@@ -9,6 +11,11 @@ function Course({ course, setMsg }) {
         <h5 className="card-title">{course.coursename}</h5>
         <p className="card-text">{course.coursedesc}</p>
         <DeleteModal course={course} setMsg={setMsg} />
+        <LinkContainer to={`/courses/${course.courseid}`}>
+          <Button className="m-3" variant="primary">
+            Details
+          </Button>
+        </LinkContainer>
       </div>
     </div>
   );

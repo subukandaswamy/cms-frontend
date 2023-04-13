@@ -26,7 +26,9 @@ function App() {
         <CourseForm setcourses={setcourses} setMsg={setMsg} />
         {msg.length > 0 && <Message msg={msg} setMsg={setMsg} />}
         {courses.map((course) => {
-          return <Course course={course} setMsg={setMsg} />;
+          return (
+            <Course key={course.courseid} course={course} setMsg={setMsg} />
+          );
         })}
       </div>
     </MessageContext.Provider>
