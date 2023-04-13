@@ -6,7 +6,7 @@ import About from "./About";
 import reportWebVitals from "./reportWebVitals";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CourseDetails from "./components/CourseDetails";
+import CourseDetails from "./CourseDetails";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([

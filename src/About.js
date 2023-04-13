@@ -1,13 +1,12 @@
 import React from "react";
-import CMSNav from "./components/CMSNav";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import Header from "./components/Header";
 
 function About() {
   return (
     <div>
-      <h1 className="App-header">Course Management System</h1>
-      <CMSNav />
+      <Header />
       <Card style={{ width: "30rem", margin: "auto" }}>
         <Card.Img variant="top" src="logo.png" />
         <Card.Body>
