@@ -2,6 +2,7 @@ import { useEffect, useState, createContext } from "react";
 import "./App.css";
 import Course from "./components/Course";
 import CourseForm from "./components/CourseForm";
+import Header from "./components/Header";
 import Message from "./components/Message";
 
 export const MessageContext = createContext();
@@ -20,7 +21,7 @@ function App() {
   return (
     <MessageContext.Provider value={setMsg}>
       <div>
-        <h1 className="App-header">Course Management System</h1>
+        <Header />
         <CourseForm setcourses={setcourses} setMsg={setMsg} />
         {msg.length > 0 && <Message msg={msg} setMsg={setMsg} />}
         {courses.map((course) => {
